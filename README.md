@@ -1,96 +1,62 @@
-# 🌦️ Weatherly — A Decoupled Weather App
+# 🌦️ Weatherly — A Decoupled Weather Application
 
-Weatherly is a full-stack weather application built using a **decoupled architecture**. The frontend is powered by **Next.js with TypeScript** and styled with **TailwindCSS using RippleUI components**, while the backend is built using the **latest version of Laravel**, serving as an API wrapper around the [OpenWeatherMap API](https://openweathermap.org/api).
+Weatherly is a modern weather application built with a decoupled architecture, featuring a Next.js frontend and Laravel API backend. This project demonstrates clean architecture principles, type safety with TypeScript, and responsive UI design.
 
----
+## ✨ Features
 
-## 📸 Preview
-
-> 🔗 [Wireframe Reference](https://docs.google.com/document/d/1b2c0PGxCRV34K06jz_D_OGpPKPR7CrVByB8OYmL33xY/edit)
-
-![screenshot](preview.png) <!-- Optional: Add screenshot of the UI here -->
-
----
-
-## 🧱 Tech Stack
-
-| Layer        | Technology                |
-| ------------ | ------------------------- |
-| Frontend     | Next.js + TypeScript      |
-| UI Framework | Tailwind CSS + RippleUI   |
-| Backend      | Laravel (API only)        |
-| HTTP Client  | `fetch` (frontend), `Http` facade (Laravel) |
-| Data Source  | OpenWeatherMap API        |
-
----
-
-## 🚀 Features
-
-- 🔍 Search for weather by city
-- 🌤️ Displays temperature, condition, humidity, and wind
-- 💅 Clean responsive UI with RippleUI styling
-- ⚡ Fast AJAX interactions via `fetch()`
-- 🧠 Type-safe frontend using TypeScript
-- 📂 Fully decoupled architecture for scalability
-
----
-
-## 🛠️ Setup Instructions
+### Frontend (Next.js)
+- 🔍 City search with autocomplete
+- 🌡️ Current weather conditions (temp, humidity, wind)
+- 📱 Fully responsive RippleUI/Tailwind design
+- ⚡ Real-time data fetching with `fetch()`
+- 🛡️ Type-safe components with TypeScript
 
 ### Backend (Laravel API)
+- 🚀 Lightweight API wrapper for OpenWeatherMap
+- 🔄 Request validation and error handling
+- 📊 API response caching
+- 🔐 Environment-based configuration
 
-1. Clone the backend:
-   ```bash
-   git clone # 🌦️ Weatherly — A Decoupled Weather App
+## 📦 Tech Stack
 
-Weatherly is a full-stack weather application built using a **decoupled architecture**. The frontend is powered by **Next.js with TypeScript** and styled with **TailwindCSS using RippleUI components**, while the backend is built using the **latest version of Laravel**, serving as an API wrapper around the [OpenWeatherMap API](https://openweathermap.org/api).
+**Frontend**
+- Next.js 14 (App Router)
+- TypeScript 5
+- Tailwind CSS + RippleUI
+- React hooks for state management
 
----
+**Backend**
+- Laravel 11 (API-only)
+- Guzzle HTTP client
+- Redis caching (optional)
 
-## 📸 Preview
+**Services**
+- OpenWeatherMap API
 
-> 🔗 [Wireframe Reference](https://docs.google.com/document/d/1b2c0PGxCRV34K06jz_D_OGpPKPR7CrVByB8OYmL33xY/edit)
+## 🚀 Getting Started
 
-![screenshot](preview.png) <!-- Optional: Add screenshot of the UI here -->
+### Prerequisites
+- Node.js 18+
+- PHP 8.2+
+- Composer 2+
+- OpenWeatherMap API key
 
----
+### Installation
 
-## 🧱 Tech Stack
+**1. Backend Setup**
+```bash
+git clone https://github.com/Khin-90/Weather-App-Implementation-Plan.git
+cd weather-api
 
-| Layer        | Technology                |
-| ------------ | ------------------------- |
-| Frontend     | Next.js + TypeScript      |
-| UI Framework | Tailwind CSS + RippleUI   |
-| Backend      | Laravel (API only)        |
-| HTTP Client  | `fetch` (frontend), `Http` facade (Laravel) |
-| Data Source  | OpenWeatherMap API        |
+# Install dependencies
+composer install
 
----
+# Configure environment
+cp .env.example .env
+php artisan key:generate
 
-## 🚀 Features
+# Set your OpenWeatherMap API key
+echo "WEATHER_API_KEY=your_api_key_here" >> .env
 
-- 🔍 Search for weather by city
-- 🌤️ Displays temperature, condition, humidity, and wind
-- 💅 Clean responsive UI with RippleUI styling
-- ⚡ Fast AJAX interactions via `fetch()`
-- 🧠 Type-safe frontend using TypeScript
-- 📂 Fully decoupled architecture for scalability
-
----
-
-## 🛠️ Setup Instructions
-
-### Backend (Laravel API)
-
-1. Clone the backend:
-   ```bash
-   git clone https://github.com/your-username/weather-api.git
-   cd weather-api
-   composer install
-   cp .env.example .env
-   php artisan key:generate
-
-   cd weather-api
-   composer install
-   cp .env.example .env
-   php artisan key:generate
+# Start development server
+php artisan serve
