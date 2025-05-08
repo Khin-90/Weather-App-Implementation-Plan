@@ -1,0 +1,57 @@
+# --- Dependency directories ---
+node_modules/
+.pnpm/
+.pnpm-store/
+.yarn/
+dist/
+build/
+.turbo/
+.cache/
+
+# --- Environment files ---
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.vscode/
+.idea/
+
+# --- Logs and temp files ---
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+*.tmp
+*.temp
+
+# --- OS/Editor files ---
+.DS_Store
+Thumbs.db
+.Trash-*
+*.swp
+*.swo
+
+# --- Testing/coverage ---
+coverage/
+.nyc_output/
+jest.config.js
+cypress/
+
+# --- Package manager specific ---
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
+
+# --- Next.js/React specific ---
+.next/
+out/
+.next/cache/
+.next/standalone/
+.next/server/
+.next/trace
+.next/types/
+
+# --- Vite/Rollup/Bundler ---
+*.tsbuildinfo
